@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/780462fe8d.js" crossorigin="anonymous" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <section class="card" id="card">
+            <!-- Card Foronted -->
+            <div class="fronted">
+                <div class="card-fronted-logos">
+                    <img width="90" src="img/Mebyte.svg" alt="" class="card-fronted-logo-bank">
+                    <!-- <img src="img/Credit-logo/visa.png" alt="" class="card-fronted-logo-visa"> -->
+                </div>
+                <div class="card-fronted-chip">
+                    <img src="img/chip-tarjeta.png" alt="">
+                </div>
+                <div class="card-fronted-number" id="numberCredit">
+                    <p class="numberCredit">#### #### #### ####</p>
+                </div>
+                <div class="card-fronted-data">
+                    <div class="card-fronted-data-name">
+                        <p id="name">Jhon Doe</p>
+                    </div>
+                    <div class="card-fronted-data-expiration">
+                        <span class="month" id="cardMonth">Month</span>/<span class="cardYear" id="cardYear">Year</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Backend -->
+            <div class="backend">
+                <div class="card-backend-magnetic"></div>
+                <div class="card-backend-data">
+                    <div class="card-backend-data-signature">
+                        <div class="card-backend-data-signature-background">
+                            <p id="signature"></p>
+                        </div>
+                    </div>
+                    <div class="card-backend-data-ccv">
+                        <p id="ccv"></p>
+                    </div>
+                </div>
+                <div class="">
+                    <a href="">www.mebyte.com</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Formulario para la tarejeta -->
+        <div class="form-btn">
+            <button class="form-btn-open" id="btn-open">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <form action="" class="form-card" id="form-card">
+            <div class="form form-card-number">
+                <label for="inputNumber">Number card</label>
+                <input type="text" id="inputNumber" maxlength="19" autocomplete="off">
+            </div>
+            <div class="form form-card-name">
+                <label for="inputName">Full name</label>
+                <input type="text" id="inputName" autocomplete="off">
+            </div>
+           <div class="flexbox">
+                <div class="form form-expiration">
+                    <div class="form-expiration-label">
+                        <label for="selectMonth">Expira</label>
+                    </div>
+                    <div class="flexbox">
+                        <div class="form-expiration-select">
+                            <div class="form-expiration-select-month">
+                                <select name="Month" id="month">
+                                    <option disabled selected>Month</option>
+                                </select>
+                            </div>
+                            <div class="form-expiration-select-year">
+                                <select name="Year" id="year">
+                                    <option disabled selected>Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-card-ccv">
+                            <label for="InputLabel">CCV</label>
+                            <input type="text" id="inputCcv" maxlength="3">
+                        </div>
+                    </div>
+                </div>
+           </div>
+            
+            <button class="send" id="send">Send</button>
+        </form>
+    </div>
+</body>
+</html>
